@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   font-weight: 800;
-  font-size: 62px;
+  font-size: 55px;
   line-height: 60px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -396,15 +396,16 @@ a:hover {
 .one {
   background: url(header_nyc.jpg) no-repeat center center;
   background-size: cover;
+  background-color: red;
 }
 
 .two {
-  background: url(header_home.jpg) no-repeat center center;
+  background: url(header_home.png) no-repeat center center;
   background-size: cover;
 }
 
 .three {
-  background: url(header_work.jpg) no-repeat center center;
+  background: url(header_work.png) no-repeat center center;
   background-size: cover;
 }
 
@@ -415,7 +416,7 @@ a:hover {
   position: static;
   max-width: 900px;
   padding: 0 20px;
-  margin-top: 36%;
+  margin-top: 30%;
 }
 
 
