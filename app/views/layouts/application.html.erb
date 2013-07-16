@@ -11,8 +11,16 @@
 	<meta property="og:url" content="http://www.themearmada.com/demos/lava">
 	<meta property="og:site_name" content="Theme Armada">
 	<meta property="og:description" content="made with bootstrap, wrap bootstrap themes, bootstrap agency themes, creative bootstrap sites, Lava theme, responsive bootstrap theme, mobile website themes, bootstrap portfolio, theme armada">
+  <FilesMatch ".(ttf|otf|woff)$">
+  Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+
+  location ~* .(eot|ttf|woff)$ { 
+  add_header Access-Control-Allow-Origin *; 
+  }
 
   <!-- Styles -->
+
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
