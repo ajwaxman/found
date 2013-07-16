@@ -394,17 +394,17 @@ a:hover {
 
 
 .one {
-  background: url(header1.jpg) no-repeat center center;
+  background: url(header_nyc.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .two {
-  background: url(header2.jpg) no-repeat center center;
+  background: url(header_home.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .three {
-  background: url(header3.jpg) no-repeat center center;
+  background: url(header_work.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -897,6 +897,11 @@ ul.social-icons-signup li a:hover {
    Services Styles
    ========================================================================== */
 #services {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+#need-space, #have-space {
   padding-top: 120px;
   padding-bottom: 120px;
 }

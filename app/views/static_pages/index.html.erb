@@ -1,7 +1,8 @@
 <head>
 
 </head>
-<body id="top" data-spy="scroll" data-target=".navbar">
+<!-- <body id="top" data-spy="scroll" data-target=".navbar"> -->
+<body id="top" data-spy="" data-target=".navbar">
         
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -11,15 +12,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html"><%= image_tag("logo.png", :alt => "Title") %></a>
+          <%= link_to('/') do %>
+            <%= image_tag("found_logo.png", :class => "brand", :alt => "Title") %>
+          <% end %>
           <div class="nav-collapse collapse">
             <ul class="nav pull-right">
-              <li><a class="scroll" href="#top">Home</a></li>
-              <li><a class="scroll" href="#services">Services</a></li>
-              <li><a class="scroll" href="#latest-work">Work</a></li>
-              <li><a class="scroll" href="#content1">About</a></li>
+              <li><a class="scroll" href="#top"></a></li>
+              <li><a class="scroll" href="#need-space">Need Space</a></li>
+              <li><a class="scroll" href="#have-space">Have Space</a></li>
+<!--               <li><a class="scroll" href="#content1">About</a></li>
               <li><a class="scroll" href="#latest-news">News</a></li>
-              <li><a class="scroll" href="#bottom">Contact</a></li>
+              <li><a class="scroll" href="#bottom">Contact</a></li> -->
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -64,8 +67,8 @@
     </div><!-- /.carousel -->
     
     
-    <!--Services-->
-    <section id="services">
+    <!--Services - Need Space -->
+    <section id="need-space">
       <div class="container">
         <div class="row text-center">
           
@@ -104,12 +107,66 @@
     
     
     <!--Message Section-->
-    <section id="message">
+<!--     <section id="message">
       <div class="container">
         <div class="row margin-40">
           <div class="span12 text-center">
             <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua.</h2>
           </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!--Testimonial Section-->
+    <section id="testimonial">
+      <div class="container">
+        <div class="row">
+          <div class="span3 margin-30">
+            <%= image_tag("testimonial-img.png", :alt => "Title") %>
+          </div>
+          
+          <div class="span9">
+            <h2>“Lava has been an asset to our company by providing us with a cutting edge look and a web presence that shows off our work and skills.”</h2>
+            <div class="testimonial-source pull-right">Jeff | Ceo - Creative Company</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Services - Have Space -->
+    <section id="have-space">
+      <div class="container">
+        <div class="row text-center">
+          
+          <!--Seciton 1-->
+          <div class="span4 service margin-30">
+            <a href="#">
+              <i class="icon-mobile-phone icon-4x light-gray"></i>
+              <h3>Mobile Responsive</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </a>
+          </div>
+          
+          <!--Seciton 2-->
+          <div class="span4 service margin-30">
+            <a href="#">
+              <i class="icon-thumbs-up icon-4x light-gray"></i>
+              <h3>Built With Bootstrap</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </a>
+
+          </div>
+          
+          <!--Seciton 3-->
+          <div class="span4 service margin-30">
+            <a href="#">
+              <i class="icon-flag icon-4x light-gray"></i>
+              <h3>Over 249 Icons</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </a>
+
+          </div>
+          
         </div>
       </div>
     </section>
