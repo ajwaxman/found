@@ -94,3 +94,31 @@ $break_3: new-breakpoint(max-width 490px);
 	}
 }
 
+#bottom {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+#twitter {
+	padding: 175px 0;
+}
+
+.icon-twitter {
+	color: #A5B2B9;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	&:hover {
+		color: #00AAF2;
+	}
+}
+
+.icon-facebook {
+	color: #A5B2B9;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	&:hover {
+		color: #495CA5;
+	}
+}
