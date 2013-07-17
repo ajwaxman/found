@@ -1,7 +1,96 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bourbon";
+@import "neat";
+
+$lightAqua: #35A3BC;
+$darkAqua: #2E7B8C;
+$lightOrange: #FF755A;
+$darkBlue: #35A3BC;
+
+$break_0: new-breakpoint(max-width 1699px);
+$break_1: new-breakpoint(max-width 979px);
+$break_2: new-breakpoint(max-width 767px);
+$break_3: new-breakpoint(max-width 490px);
+
+
+.mobile{
+ display: none;
+}
+
+@include media($break_3) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
+
 
 .brand {
 	padding-bottom: 10px;
 }
+
+.carousel-caption-center {
+	text-align: center;
+	padding-top: 270px;
+	@include media($break_1) {
+		padding-top: 260px;
+		h1 {
+			font-size: 48px;
+		}
+	}
+	@include media($break_2) {
+		padding-top: 190px;
+		h1 {
+			font-size: 32px;
+		}
+	}
+	@include media($break_3) {
+		padding-top: 100px;
+		h1 {
+			font-size: 25px;
+		}
+	}
+}
+
+.btn-landlord {
+	margin-right: 20px;
+	background: $lightAqua; 
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	&:hover {
+		background: $darkAqua;
+	}
+	@include media($break_3) {
+		margin-right: 0;
+		padding: 15px 60px; 
+	}
+}
+
+.btn-renter {
+	background: $lightOrange;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	@include media($break_3) {
+		padding: 15px 60px; 
+	}	
+}
+
+.btn-space-mobile {
+	@include media($break_3) {
+		margin-top: 50px;
+	}
+}
+
+.carousel .item {
+	@include media($break_1) {
+			// height: 400px;	
+	}
+}
+
