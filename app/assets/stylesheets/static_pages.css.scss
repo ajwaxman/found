@@ -132,3 +132,19 @@ $break_3: new-breakpoint(max-width 490px);
 	color: $black;
 	text-align: center;
 }
+
+#signup {
+	@include media($break_1) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}	
+}
+
+.signup {
+	@include media($break_1) {
+		padding-bottom: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}	
+}
+

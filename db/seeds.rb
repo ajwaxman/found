@@ -7,6 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+#################################################
+####### NEIGHBORHOODS FOR LANDLORD FORM #########
+#################################################
+
 neighborhood_1 = Neighborhood.create(:name => "Upper West Side")
 neighborhood_2 = Neighborhood.create(:name => "Upper East Side")
 neighborhood_3 = Neighborhood.create(:name => "Midtown West")

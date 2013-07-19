@@ -2,7 +2,19 @@
    Insert Your Custom Styles Below. All styles located in this file will
    override existing main.css stylesheets.
    ========================================================================== */ 
+@import "bourbon";
+@import "neat";
 
+$lightAqua: #35A3BC;
+$darkAqua: #2E7B8C;
+$lightOrange: #FF755A;
+$darkBlue: #35A3BC;
+$black: #626c72;
+
+$break_00: new-breakpoint(max-width 1699px);
+$break_01: new-breakpoint(max-width 979px);
+$break_02: new-breakpoint(max-width 767px);
+$break_03: new-breakpoint(max-width 490px);
 
 
 .form-subtext {
@@ -12,4 +24,11 @@
 	color: #646C71;
 	weight: 100;
 	line-height: 145%;
+}
+
+#signup {
+	background: blue;
+	@include media($break_03) {
+		padding-top: 0;
+	}	
 }
