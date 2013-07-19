@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @landlord.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @landlord.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @landlord.phone %>
+</p>
+
+<p>
+  <b>Neighborhood:</b>
+  <%= @landlord.neighborhood %>
+</p>
+
+<p>
+  <b>Hours avail am:</b>
+  <%= @landlord.hours_avail_am %>
+</p>
+
+<p>
+  <b>Hours avail pm:</b>
+  <%= @landlord.hours_avail_pm %>
+</p>
+
+<p>
+  <b>Internet:</b>
+  <%= @landlord.internet %>
+</p>
+
+<p>
+  <b>Desk seats:</b>
+  <%= @landlord.desk_seats %>
+</p>
+
+<p>
+  <b>Total seats:</b>
+  <%= @landlord.total_seats %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @landlord.price %>
+</p>
+
+<p>
+  <b>Amenities:</b>
+  <%= @landlord.amenities %>
+</p>
+
+
+<%= link_to 'Edit', edit_landlord_path(@landlord) %> |
+<%= link_to 'Back', landlords_path %>

@@ -394,7 +394,7 @@ a:hover {
 
 
 .one {
-  background: url(header_nyc.jpg) no-repeat center center;
+  background: url(computer_dark.png) no-repeat center center; /* coffee_cup_dark */
   background-size: cover;
 }
 

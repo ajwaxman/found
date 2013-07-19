@@ -1,0 +1,37 @@
+<h1>Listing renters</h1>
+
+<table>
+  <tr>
+    <th>Team size</th>
+    <th>Min desks</th>
+    <th>Acceptable desks</th>
+    <th>Min seats</th>
+    <th>Acceptable seats</th>
+    <th>Price</th>
+    <th>Hours required am</th>
+    <th>Hours required pm</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @renters.each do |renter| %>
+  <tr>
+    <td><%= renter.team_size %></td>
+    <td><%= renter.min_desks %></td>
+    <td><%= renter.acceptable_desks %></td>
+    <td><%= renter.min_seats %></td>
+    <td><%= renter.acceptable_seats %></td>
+    <td><%= renter.price %></td>
+    <td><%= renter.hours_required_am %></td>
+    <td><%= renter.hours_required_pm %></td>
+    <td><%= link_to 'Show', renter %></td>
+    <td><%= link_to 'Edit', edit_renter_path(renter) %></td>
+    <td><%= link_to 'Destroy', renter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Renter', new_renter_path %>

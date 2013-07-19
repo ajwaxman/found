@@ -1,4 +1,10 @@
 Found::Application.routes.draw do
+  resources :renters
+
+
+  resources :landlords
+
+
   root :to => 'static_pages#index'
 
   # The priority is based upon order of creation:

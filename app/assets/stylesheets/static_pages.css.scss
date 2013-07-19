@@ -8,6 +8,7 @@ $lightAqua: #35A3BC;
 $darkAqua: #2E7B8C;
 $lightOrange: #FF755A;
 $darkBlue: #35A3BC;
+$black: #626c72;
 
 $break_0: new-breakpoint(max-width 1699px);
 $break_1: new-breakpoint(max-width 979px);
@@ -121,4 +122,13 @@ $break_3: new-breakpoint(max-width 490px);
 	&:hover {
 		color: #495CA5;
 	}
+}
+
+.need-space-header-div {
+	text-align: center;
+}
+
+.need-space-header {
+	color: $black;
+	text-align: center;
 }

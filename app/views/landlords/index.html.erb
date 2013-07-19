@@ -1,0 +1,43 @@
+<h1>Listing landlords</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Neighborhood</th>
+    <th>Hours avail am</th>
+    <th>Hours avail pm</th>
+    <th>Internet</th>
+    <th>Desk seats</th>
+    <th>Total seats</th>
+    <th>Price</th>
+    <th>Amenities</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @landlords.each do |landlord| %>
+  <tr>
+    <td><%= landlord.name %></td>
+    <td><%= landlord.email %></td>
+    <td><%= landlord.phone %></td>
+    <td><%= landlord.neighborhood %></td>
+    <td><%= landlord.hours_avail_am %></td>
+    <td><%= landlord.hours_avail_pm %></td>
+    <td><%= landlord.internet %></td>
+    <td><%= landlord.desk_seats %></td>
+    <td><%= landlord.total_seats %></td>
+    <td><%= landlord.price %></td>
+    <td><%= landlord.amenities %></td>
+    <td><%= link_to 'Show', landlord %></td>
+    <td><%= link_to 'Edit', edit_landlord_path(landlord) %></td>
+    <td><%= link_to 'Destroy', landlord, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Landlord', new_landlord_path %>

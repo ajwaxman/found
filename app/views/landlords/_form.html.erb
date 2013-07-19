@@ -1,0 +1,61 @@
+<%= form_for(@landlord) do |f| %>
+  <% if @landlord.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@landlord.errors.count, "error") %> prohibited this landlord from being saved:</h2>
+
+      <ul>
+      <% @landlord.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :neighborhood %><br />
+    <%= f.text_field :neighborhood %>
+  </div>
+  <div class="field">
+    <%= f.label :hours_avail_am %><br />
+    <%= f.number_field :hours_avail_am %>
+  </div>
+  <div class="field">
+    <%= f.label :hours_avail_pm %><br />
+    <%= f.number_field :hours_avail_pm %>
+  </div>
+  <div class="field">
+    <%= f.label :internet %><br />
+    <%= f.text_field :internet %>
+  </div>
+  <div class="field">
+    <%= f.label :desk_seats %><br />
+    <%= f.number_field :desk_seats %>
+  </div>
+  <div class="field">
+    <%= f.label :total_seats %><br />
+    <%= f.number_field :total_seats %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :amenities %><br />
+    <%= f.text_field :amenities %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

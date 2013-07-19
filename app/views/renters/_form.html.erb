@@ -1,0 +1,49 @@
+<%= form_for(@renter) do |f| %>
+  <% if @renter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@renter.errors.count, "error") %> prohibited this renter from being saved:</h2>
+
+      <ul>
+      <% @renter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team_size %><br />
+    <%= f.number_field :team_size %>
+  </div>
+  <div class="field">
+    <%= f.label :min_desks %><br />
+    <%= f.number_field :min_desks %>
+  </div>
+  <div class="field">
+    <%= f.label :acceptable_desks %><br />
+    <%= f.number_field :acceptable_desks %>
+  </div>
+  <div class="field">
+    <%= f.label :min_seats %><br />
+    <%= f.number_field :min_seats %>
+  </div>
+  <div class="field">
+    <%= f.label :acceptable_seats %><br />
+    <%= f.number_field :acceptable_seats %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :hours_required_am %><br />
+    <%= f.number_field :hours_required_am %>
+  </div>
+  <div class="field">
+    <%= f.label :hours_required_pm %><br />
+    <%= f.number_field :hours_required_pm %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

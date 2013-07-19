@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Team size:</b>
+  <%= @renter.team_size %>
+</p>
+
+<p>
+  <b>Min desks:</b>
+  <%= @renter.min_desks %>
+</p>
+
+<p>
+  <b>Acceptable desks:</b>
+  <%= @renter.acceptable_desks %>
+</p>
+
+<p>
+  <b>Min seats:</b>
+  <%= @renter.min_seats %>
+</p>
+
+<p>
+  <b>Acceptable seats:</b>
+  <%= @renter.acceptable_seats %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @renter.price %>
+</p>
+
+<p>
+  <b>Hours required am:</b>
+  <%= @renter.hours_required_am %>
+</p>
+
+<p>
+  <b>Hours required pm:</b>
+  <%= @renter.hours_required_pm %>
+</p>
+
+
+<%= link_to 'Edit', edit_renter_path(@renter) %> |
+<%= link_to 'Back', renters_path %>
