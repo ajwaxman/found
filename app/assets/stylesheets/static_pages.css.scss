@@ -149,3 +149,36 @@ $break_3: new-breakpoint(max-width 490px);
 	}	
 }
 
+a:visited {
+	color: white;
+}
+
+.thank-you {
+	text-align: center;
+	font-size: 30px;
+	line-height: 100%;
+	@include media($break_1) {
+		font-size: 25px;
+	}
+	@include media($break_3) {
+		font-size: 25px;
+		line-height: 120%;
+	}
+}
+
+.thank-you-div {
+	padding-top: 170px;
+	@include media($break_1) {
+		padding-top: 120px;
+		padding-bottom: 100px;
+	}
+	@include media($break_3) {
+		padding-top: 40px;
+		padding-bottom: 10px;
+	}
+}
+
+#content1 {
+	// background: url('coffee_cup_dark.png') no-repeat center center;
+}
+

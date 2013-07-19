@@ -26,9 +26,4 @@ $break_03: new-breakpoint(max-width 490px);
 	line-height: 145%;
 }
 
-#signup {
-	background: blue;
-	@include media($break_03) {
-		padding-top: 0;
-	}	
-}
+

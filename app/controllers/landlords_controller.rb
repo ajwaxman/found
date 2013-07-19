@@ -45,7 +45,7 @@ class LandlordsController < ApplicationController
 
     respond_to do |format|
       if @landlord.save
-        format.html { redirect_to @landlord, notice: 'Landlord was successfully created.' }
+        format.html { redirect_to '/thanks', notice: 'Landlord was successfully created.' }
         format.json { render json: @landlord, status: :created, location: @landlord }
       else
         format.html { render action: "new" }
