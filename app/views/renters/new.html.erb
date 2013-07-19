@@ -1,5 +1,21 @@
-<h1>New renter</h1>
+<%= render 'shared/header' %>
 
-<%= render 'form' %>
+<!--Content-->
 
-<%= link_to 'Back', renters_path %>
+<section id="signup">
+  <div class="container">
+    <div class="row margin-40">
+      
+      <div class="span6 offset3 text-center signup">
+          <h3>Need Office Space?</h3><br/>
+          <div class="form-subtext">Fill out the form below to find comfortable,<br class="desktop">affordable, and short-term office space<br></div>
+
+        	<%= render 'form' %>
+  	  
+      </div><!--End Span6-->
+      
+    </div><!--End Row-->
+  </div><!--End Container-->
+</section>
+
+<%= render 'shared/footer' %>

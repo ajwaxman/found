@@ -134,6 +134,7 @@ $break_3: new-breakpoint(max-width 490px);
 }
 
 #signup {
+	padding-bottom: 10px;
 	@include media($break_1) {
 		padding-top: 0;
 		padding-bottom: 0;

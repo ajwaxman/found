@@ -18,7 +18,7 @@
     <%= f.text_field :email, :class => "input-xlarge", :placeholder => "Email" %>
   </div>
   <div class="field">
-    <%= f.text_field :phone, :class => "input-xlarge", :placeholder => "Phone Number (Optional)" %><br><br>
+    <%= f.telephone_field :phone, :class => "input-xlarge", :placeholder => "Phone Number (Optional)" %><br><br>
   </div>
   <div class="field">
     <%= f.label :neighborhood %>
@@ -51,6 +51,32 @@
   </div>
 
   <div class="field">
+    <%= f.label :desired_time, "Desired Hours (Mon - Fri)" %>
+    <select name="renter[hours_required_am]" class="input-xlarge">
+      <option value=0>From</option>
+      <option value=6>6am</option>
+      <option value=7>7am</option>
+      <option value=8>8am</option>
+      <option value=9>9am</option>
+      <option value=10>10am</option>
+      <option value=11>11am</option>
+      <option value=12>12pm</option>
+    </select><br><br>
+  <div class="field">
+    <select name="renter[hours_required_pm]" class="input-xlarge">
+      <option value=0>Until</option>
+      <option value=5>5pm</option>
+      <option value=6>6pm</option>
+      <option value=7>7pm</option>
+      <option value=8>8pm</option>
+      <option value=9>9pm</option>
+      <option value=10>10pm</option>
+      <option value=11>11pm</option>
+      <option value=12>Midnight</option>
+    </select><br><br>
+  </div>
+
+  <div class="field">
     <%= f.label :internet, "Internet Speed" %>
     <select name="landlord[internet]" class="input-xlarge">
       <option value="Slow">Slow</option>
@@ -69,7 +95,7 @@
     <%= f.range_field :total_seats, :in => 0..15, :step => '1', :id => "avail_seats", :value => 0 %>
   </div><br><br>
   <div class="field">
-    <label>Interested Price: $<span id="price_output">0</span></label><br/>
+    <label>Desired Monthly Income: $<span id="price_output">0</span></label><br/>
     <%= f.range_field :price, :in => 0..5000, :step => '250', :id => "price", :value => 0 %>
   </div><br><br>
 <!--   <div class="field">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130719013421) do
+ActiveRecord::Schema.define(:version => 20130719051755) do
 
   create_table "landlords", :force => true do |t|
     t.string   "name"
@@ -46,6 +46,9 @@ ActiveRecord::Schema.define(:version => 20130719013421) do
     t.integer  "hours_required_pm"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
   end
 
 end
