@@ -1,4 +1,4 @@
-<%= form_for(@landlord) do |f| %>
+<%= form_for @landlord, :html => {:id => "signup-form", :class => "form-horizontal"} do |f| %>
   <% if @landlord.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@landlord.errors.count, "error") %> prohibited this landlord from being saved:</h2>
@@ -11,51 +11,122 @@
     </div>
   <% end %>
 
+  <% @hours_morning = [
+    {:text => "6am", :value => 6},
+    {:text => "7am", :value => 7},
+    {:text => "8am", :value => 8},
+    {:text => "9am", :value => 9},
+    {:text => "10am", :value => 10},
+    {:text => "11am", :value => 11},
+    {:text => "12pm", :value => 12},
+    ] %>
+
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "input-xlarge", :placeholder => "Name"%>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :class => "input-xlarge", :placeholder => "Email" %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
+    <%= f.text_field :phone, :class => "input-xlarge", :placeholder => "Phone Number (Optional)" %><br><br>
   </div>
   <div class="field">
-    <%= f.label :neighborhood %><br />
-    <%= f.text_field :neighborhood %>
+    <%= f.label :neighborhood %>
+    <%= select_tag :neighborhood, options_from_collection_for_select(@neighborhoods, 'name', 'name'), {:class=>"input-xlarge"} %><br><br>
   </div>
   <div class="field">
-    <%= f.label :hours_avail_am %><br />
-    <%= f.number_field :hours_avail_am %>
+    <%= f.label :availability, "Availability (Mon - Fri)" %>
+    <select name="landlord[hours_avail_am]" class="input-xlarge">
+      <option value=0>From</option>
+      <option value=6>6am</option>
+      <option value=7>7am</option>
+      <option value=8>8am</option>
+      <option value=9>9am</option>
+      <option value=10>10am</option>
+      <option value=11>11am</option>
+      <option value=12>12pm</option>
+    </select><br><br>
+  <div class="field">
+    <select name="landlord[hours_avail_pm]" class="input-xlarge">
+      <option value=0>Until</option>
+      <option value=5>5pm</option>
+      <option value=6>6pm</option>
+      <option value=7>7pm</option>
+      <option value=8>8pm</option>
+      <option value=9>9pm</option>
+      <option value=10>10pm</option>
+      <option value=11>11pm</option>
+      <option value=12>Midnight</option>
+    </select><br><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :internet, "Internet Speed" %>
+    <select name="landlord[internet]" class="input-xlarge">
+      <option value="Slow">Slow</option>
+      <option value="Medium">Medium</option>
+      <option value="Fast">Fast</option>
+      <option value="Super Speed">Super Speed</option>
+      <option value="No Internet">No Internet</option>
+    </select><br><br><br>
   </div>
   <div class="field">
-    <%= f.label :hours_avail_pm %><br />
-    <%= f.number_field :hours_avail_pm %>
-  </div>
+    <label>Available Desks: <span id="avail_desks_output">0</span></label><br/>
+    <%= f.range_field :desk_seats, :in => 0..10, :step => '1', :id => "avail_desks", :value => 0 %>
+  </div><br><br>
   <div class="field">
-    <%= f.label :internet %><br />
-    <%= f.text_field :internet %>
-  </div>
+    <label>Available Seats: <span id="avail_seats_output">0</span></label><br/>
+    <%= f.range_field :total_seats, :in => 0..15, :step => '1', :id => "avail_seats", :value => 0 %>
+  </div><br><br>
   <div class="field">
-    <%= f.label :desk_seats %><br />
-    <%= f.number_field :desk_seats %>
-  </div>
-  <div class="field">
-    <%= f.label :total_seats %><br />
-    <%= f.number_field :total_seats %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.number_field :price %>
-  </div>
-  <div class="field">
+    <label>Interested Price: $<span id="price_output">0</span></label><br/>
+    <%= f.range_field :price, :in => 0..5000, :step => '250', :id => "price", :value => 0 %>
+  </div><br><br>
+<!--   <div class="field">
     <%= f.label :amenities %><br />
     <%= f.text_field :amenities %>
-  </div>
+  </div> -->
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit Form", :class => "btn-main" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  function CurrencyFormatted(amount)
+    {
+        var i = parseFloat(amount);
+        if(isNaN(i)) { i = 0; }
+        var minus = '';
+        if(i < 0) { minus = '-'; }
+        i = Math.abs(i);
+        i = parseInt((i + .005) * 100);
+        i = i / 100;
+        s = new String(i);
+        if(s.indexOf('.') < 0) { s; }
+        if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
+        s = minus + s;
+        return s;
+    }
+
+  $.fn.digits = function(){ 
+    return this.each(function(){ 
+        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+    })
+  }
+
+  $("#avail_desks").change(function () {                    
+     var newValue = $('#avail_desks').val();
+     $("#avail_desks_output").html(newValue);
+  });
+  $("#avail_seats").change(function () {                    
+     var newValue = $('#avail_seats').val();
+     $("#avail_seats_output").html(newValue);
+  });
+  $("#price").change(function () {                    
+     var newValue = $('#price').val();
+     var newPrice = CurrencyFormatted(parseInt(newValue));
+     $("#price_output").html(newPrice).digits();
+  });
+</script>
+
+
