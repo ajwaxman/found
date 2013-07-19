@@ -6,6 +6,7 @@ Found::Application.routes.draw do
 
   get '/renteeform' => 'landlords#new'
   get '/renterform' => 'renters#new'
+  get '/thanks' => 'static_pages#thanks'
 
 
   root :to => 'static_pages#index'
