@@ -124,6 +124,21 @@ $break_3: new-breakpoint(max-width 490px);
 	}
 }
 
+.secondary-section-header {
+	text-align: center;
+	padding-bottom: 90px;
+	font-size: 45px;
+	line-height: 100%;
+	@include media($break_1) {
+		font-size: 40px;
+	}	
+}
+
+.service p {
+	font-size: 16px;
+	line-height: 130%;
+}
+
 .need-space-header-div {
 	text-align: center;
 }
@@ -188,5 +203,30 @@ a:visited {
 
 #content1 {
 	// background: url('coffee_cup_dark.png') no-repeat center center;
+}
+
+#testimonial {
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+
+.sharing-econ-header {
+	text-align: center;
+	color: white;
+	padding-bottom: 40px;
+}
+
+.sharing-econ-logos-div {
+	text-align: center;
+}
+
+.sharing-econ-logos {
+	@include media($break_3) {
+		padding: 0 30px;
+	}
+}
+
+.task-rabbit {
+	padding-top: 20px;
 }
 
