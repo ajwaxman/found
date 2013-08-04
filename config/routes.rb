@@ -1,4 +1,7 @@
 Found::Application.routes.draw do
+  devise_for :users
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+
   resources :renters
 
 
@@ -7,9 +10,12 @@ Found::Application.routes.draw do
   get '/renteeform' => 'landlords#new'
   get '/renterform' => 'renters#new'
   get '/thanks' => 'static_pages#thanks'
+  get 'auth' => 'static_pages#auth'
 
 
   root :to => 'static_pages#index'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

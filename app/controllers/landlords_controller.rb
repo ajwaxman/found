@@ -1,4 +1,5 @@
 class LandlordsController < ApplicationController
+  before_filter :authenticate_user!, only: [:index, :edit, :update, :destroy]
   # GET /landlords
   # GET /landlords.json
   def index
