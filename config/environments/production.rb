@@ -68,5 +68,5 @@ Found::Application.configure do
   # From devise 
   config.action_mailer.default_url_options = { :host => 'http://damp-bastion-3842.herokuapp.com/' }
   
-  config.assets.initialize_on_precompile = false
+  # config.assets.initialize_on_precompile = false
 end
