@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  # before_filter :authenticate_user!, only: [:auth]
+  before_filter :authenticate_user!, only: [:auth]
 
   def index
   end
