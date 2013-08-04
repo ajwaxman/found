@@ -1,5 +1,5 @@
 class RentersController < ApplicationController
-  before_filter :authenticate_user!, only: [:index, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:show, :index, :edit, :update, :destroy]
 
   # GET /renters
   # GET /renters.json
