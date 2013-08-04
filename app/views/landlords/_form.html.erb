@@ -49,6 +49,10 @@
       <option value=12>Midnight</option>
     </select><br><br>
   </div>
+    <%= f.label :avail_on_weekends, "Available on Weekends?" %>
+  <div class="field">
+    <%= f.check_box :avail_on_weekends %>
+  </div><br>
 
   <div class="field">
     <%= f.label :internet, "Internet Speed" %>

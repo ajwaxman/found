@@ -65,8 +65,8 @@
           </div>
         </div>
       </div>
-      <a class="left carousel-control hidden-phone" href="#header" data-slide="prev"><i class="icon-angle-left"></i></a>
-      <a class="right carousel-control hidden-phone" href="#header" data-slide="next"><i class="icon-angle-right"></i></a>
+      <a class="left carousel-control carousel-control-left hidden-phone" href="#header" data-slide="prev"><i class="icon-angle-left"></i></a>
+      <a class="right carousel-control carousel-control-right hidden-phone" href="#header" data-slide="next"><i class="icon-angle-right"></i></a>
     </div><!-- /.carousel -->
     
     
@@ -88,23 +88,26 @@
           
           <!--Seciton 1-->
           <div class="span4 service margin-30">
-              <span class="icon-dollar icon-4x light-gray"></span>
+              <span class="icon-dollar icon-4x gray"></span>
               <h3>Low Cost</h3>
               <p>Private, fully furnished office space with wi-fi, kitchen and bathroom. All at a price you won't believe, plus we do the legwork.</p>
           </div>
           
           <!--Seciton 2-->
           <div class="span4 service margin-30">
-              <span class="icon-calendar icon-4x light-gray"></span>
+              <span class="icon-calendar icon-4x gray"></span>
               <h3>Short Term</h3>
               <p>Say goodbye to 2-3 year long leases. We've got month-to-month office space perfect for your growing business.</p>
           </div>
           
           <!--Seciton 3-->
           <div class="span4 service margin-30">
-              <span class="icon-laptop icon-4x light-gray"></span>
+              <span class="icon-laptop icon-4x gray"></span>
               <h3>Convenient</h3>
               <p>No full day trips to IKEA or hour long calls with Time Warner. All you need to bring is your laptop.</p>
+          </div>
+          <div class = "span12 margin-30 btn-middle">
+            <a class="btn-main btn-landlord" href="/renterform"><i class=""></i>Sign Up Now</a>
           </div>
           
         </div>
@@ -162,14 +165,14 @@
           
           <!--Seciton 1-->
           <div class="span4 service margin-30">
-              <span class="icon-home icon-4x light-gray"></span>
+              <span class="icon-home icon-4x gray"></span>
               <h3>Free to List</h3>
               <p>No upfront signup fees. The only way we make money is by helping you make more.</p>
           </div>
           
           <!--Seciton 2-->
           <div class="span4 service margin-30">
-              <span class="icon-bolt icon-4x light-gray"></span>
+              <span class="icon-bolt icon-4x gray"></span>
               <h3>1 Minute Signup</h3>
               <p>To get started simply answer a few basic questions about your space. We'll take care of the rest.</p>
 
@@ -177,12 +180,13 @@
           
           <!--Seciton 3-->
           <div class="span4 service margin-30">
-              <span class="icon-group icon-4x light-gray"></span>
+              <span class="icon-group icon-4x gray"></span>
               <h3>Community</h3>
               <p>An opportunity to meet incredible entrepreneurs and talented teams who are building the future.</p>
-
           </div>
-          
+          <div class = "span12 margin-30 btn-middle">
+            <a class="btn-main btn-landlord" href="/renteeform"><i class=""></i>Sign Up Now</a>
+          </div>          
         </div>
       </div>
     </section>
@@ -246,13 +250,19 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript">
-    //   !function ($) {
-    //     $(function(){
-    //       $('#header').carousel()
-    //     })
-    //   }(window.jQuery)
+      $(window).load(function() {
+        $('#header').carousel({
+          interval: 4000,
+          pause: "false"
+        });
+      });      
+      // !function ($) {
+      //   $(function(){
+      //     $('#header').carousel()
+      //   })
+      // }(window.jQuery)
     // </script>
-    
+
     <script type="text/javascript">
     //     $(window).load(function() {
     //   $('.flexslider').flexslider({

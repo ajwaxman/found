@@ -31,6 +31,7 @@ end
 gem 'jquery-rails'
 gem 'bourbon'
 gem 'neat'
+gem 'font-awesome-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

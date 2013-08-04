@@ -11,7 +11,9 @@
  *= require_self
  *= require_tree .
  *= require /../custom-styles.css.scss
+ *= require font-awesome
  */
 
 @import "bourbon";
 @import "neat";
+@import "font-awesome";
