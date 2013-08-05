@@ -88,7 +88,7 @@
           
           <!--Seciton 1-->
           <div class="span4 service margin-30">
-              <span class="icon-dollar icon-4x gray"></span>
+              <span class="icon-money icon-4x gray"></span>
               <h3>Low Cost</h3>
               <p>Private, fully furnished office space with wi-fi, kitchen and bathroom. All at a price you won't believe, plus we do the legwork.</p>
           </div>
@@ -133,20 +133,28 @@
           <div class="span12 sharing-econ-header">
             <h2>Become Part of the Sharing Economy Revolution</h2>
           </div>
-          <div class="span3 margin-30 sharing-econ-logos-div">
-            <%= image_tag("airbnb.png", :alt => "Title", :class => "sharing-econ-logos") %>
-          </div>
-          <div class="span3 margin-30 sharing-econ-logos-div">
-            <%= image_tag("lending-club.png", :alt => "Title", :class => "sharing-econ-logos" ) %>
-          </div>
-          <div class="span3 margin-30 sharing-econ-logos-div">
-            <%= image_tag("lyft.png", :alt => "Title", :class => "sharing-econ-logos") %>
-          </div>
-          <div class="span3 margin-30 sharing-econ-logos-div">
-            <a href="https://taskrabbit.com">
-            <%= image_tag("task-rabbit.png", :alt => "Title", :class => "sharing-econ-logos task-rabbit") %>
-            </a>
-          </div>
+          <%= link_to("https://airbnb.com") do %>
+            <div class="span3 margin-30 sharing-econ-logos-div">
+              <%= image_tag("airbnb.png", :alt => "Title", :class => "sharing-econ-logos") %>
+            </div>
+          <% end %>
+          <%= link_to("https://lendingclub.com", :target => "_blank") do %>
+            <div class="span3 margin-30 sharing-econ-logos-div">
+              <%= image_tag("lending-club.png", :alt => "Title", :class => "sharing-econ-logos" ) %>
+            </div>
+          <% end %>
+          <%= link_to("http://www.lyft.me/", :target => "_blank") do %>
+            <div class="span3 margin-30 sharing-econ-logos-div">
+              <%= image_tag("lyft.png", :alt => "Title", :class => "sharing-econ-logos") %>
+            </div>
+          <% end %>
+          <%= link_to("https://lendingclub.com", :target => "_blank") do %>
+            <div class="span3 margin-30 sharing-econ-logos-div">
+              <a href="https://taskrabbit.com">
+              <%= image_tag("task-rabbit.png", :alt => "Title", :class => "sharing-econ-logos task-rabbit") %>
+              </a>
+            </div>
+          <% end %>
       </div>
     </section>
 

@@ -22,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :neighborhood %>
-    <%= select_tag :neighborhood, options_from_collection_for_select(@neighborhoods, 'name', 'name'), {:class=>"input-xlarge"} %><br><br>
+    <%= f.select :neighborhood, options_from_collection_for_select(@neighborhoods, 'name', 'name'), {:class=>"input-xlarge"} %><br><br>
   </div>
   <div class="field">
     <%= f.label :availability, "Availability (Mon - Fri)" %>
