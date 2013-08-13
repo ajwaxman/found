@@ -20,7 +20,7 @@ Found::Application.configure do
   }
 
   # specify what domain to use for mailer URLs
-  config.action_mailer.default_url_options = { host: "found.io" }  # Settings specified here will take precedence over those in config/application.rb
+  config.action_mailer.default_url_options = { host: "http://found.io" }  # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
   config.cache_classes = true
