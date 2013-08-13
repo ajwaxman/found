@@ -33,6 +33,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-rails'
 gem 'devise'
+gem "figaro"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

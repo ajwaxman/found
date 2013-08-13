@@ -1,5 +1,26 @@
 Found::Application.configure do
-  # Settings specified here will take precedence over those in config/application.rb
+  ###################
+  ## MAILER CONFIG ##
+  ###################
+
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = true
+
+  # How mail is sent in action mailer, options are :smtp, :letter_opener, :sendmail, :file, and :test
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "gmail.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+  }
+
+  # specify what domain to use for mailer URLs
+  config.action_mailer.default_url_options = { host: "found.io" }  # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
   config.cache_classes = true
