@@ -31,7 +31,7 @@ group :production do
 end
 
 gem 'jquery-rails'
-gem 'bourbon'
+gem "bourbon", "~> 0.2.1"
 gem 'neat'
 gem 'font-awesome-rails'
 gem 'devise'
