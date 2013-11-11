@@ -9,8 +9,9 @@ group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.8.1'
   gem 'annotate', '~> 2.4.1.beta'
+  gem 'better_errors'       # => gem to display errors better for debugging
+  gem 'binding_of_caller'   # => works with better_errors to show instance variables
 end
-
 
 # Gems used only for assets and not required
 # in production environments by default.
